@@ -54,7 +54,7 @@ def stop():
 	PWM.stop(channel_4_pwm)
 	PWM.cleanup()
 
-def rotate_rover(duty, direction)
+def rotate_rover(duty, direction):
 	if direction is "L":
 		stop()
 		GPIO.output(channel_1_dir, GPIO.LOW)
@@ -80,6 +80,8 @@ def rotate_rover(duty, direction)
 		stop()
 
 #Test program to use all of the rover control functions. Uncomment to verify connections
+init_rover()
+time.sleep(3)
 forward(100)
 time.sleep(3)
 backward(100)
