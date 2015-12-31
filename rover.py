@@ -80,6 +80,7 @@ def rotate_rover(duty, direction):
 		stop()
 
 #Test program to use all of the rover control functions. Uncomment to verify connections
+'''
 init_rover()
 time.sleep(3)
 forward(100)
@@ -91,4 +92,4 @@ time.sleep(3)
 rotate_rover(100, "R")
 time.sleep(3)
 stop()
-
+'''
