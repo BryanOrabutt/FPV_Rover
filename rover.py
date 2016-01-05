@@ -7,8 +7,8 @@ channel_2_dir = "P9_12"
 channel_3_dir = "P9_13"
 channel_4_dir = "P9_15"
 channel_1_pwm = "P9_14"
-channel_2_pwm = "P8_12"
-channel_3_pwm = "P8_14"
+channel_2_pwm = "P9_16"
+channel_3_pwm = "P9_21"
 channel_4_pwm = "P9_22"
 
 def init_rover():
@@ -20,10 +20,14 @@ def init_rover():
 	GPIO.output(channel_2_dir, GPIO.HIGH)
 	GPIO.output(channel_3_dir, GPIO.LOW)
 	GPIO.output(channel_4_dir, GPIO.LOW)
-	PWM.start(channel_1_pwm, 0, 250, 0)
-	PWM.start(channel_2_pwm, 0, 250, 0)
-	PWM.start(channel_3_pwm, 0, 250, 0)
-	PWM.start(channel_4_pwm, 0, 250, 0)
+	PWM.start(channel_1_pwm, 0.0))
+	PWM.start(channel_2_pwm, 0.0)
+	PWM.start(channel_3_pwm, 0.0)
+	PWM.start(channel_4_pwm, 0.0)
+	PWM.set_frequency(channel_1_pwm, 250)
+	PWM.set_frequency(channel_2_pwm, 250)
+	PWM.set_frequency(channel_3_pwm, 250)
+	PWM.set_frequency(channel_4_pwm, 250)
 
 
 def forward(duty):
@@ -88,3 +92,5 @@ time.sleep(3)
 rotate_rover(100, "R")
 time.sleep(3)
 stop()
+GPIO.cleanup()
+PWM.cleanup()
