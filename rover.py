@@ -7,8 +7,8 @@ channel_2_dir = "P9_12"
 channel_3_dir = "P9_13"
 channel_4_dir = "P9_15"
 channel_1_pwm = "P9_14"
-channel_2_pwm = "P9_16"
-channel_3_pwm = "P9_21"
+channel_2_pwm = "P8_13"
+channel_3_pwm = "P9_42"
 channel_4_pwm = "P9_22"
 
 def init_rover():
