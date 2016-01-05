@@ -9,7 +9,7 @@ channel_4_dir = "P9_15"
 channel_1_pwm = "P9_14"
 channel_2_pwm = "P8_13"
 channel_3_pwm = "P9_42"
-channel_4_pwm = "P9_22"
+channel_4_pwm = "P9_21"
 
 def init_rover():
 	GPIO.setup(channel_1_dir, GPIO.OUT)
