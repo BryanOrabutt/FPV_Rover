@@ -59,20 +59,19 @@ def stop():
 
 def rotate_rover(duty, direction):
 	if direction is "L":
-		stop()
-		GPIO.output(channel_1_dir, GPIO.LOW)
-		GPIO.output(channel_2_dir, GPIO.HIGH)
-		GPIO.output(channel_3_dir, GPIO.HIGH)
-		GPIO.output(channel_4_dir, GPIO.LOW)
+		GPIO.output(channel_1_dir, GPIO.HIGH)
+		GPIO.output(channel_2_dir, GPIO.LOW)
+		GPIO.output(channel_3_dir, GPIO.LOW)
+		GPIO.output(channel_4_dir, GPIO.HIGH)
 		PWM.set_duty_cycle(channel_1_pwm, duty)
 		PWM.set_duty_cycle(channel_2_pwm, duty)
 		PWM.set_duty_cycle(channel_3_pwm, duty)
 		PWM.set_duty_cycle(channel_4_pwm, duty)
 	elif direction is "R":
-		GPIO.output(channel_1_dir, GPIO.HIGH)
-		GPIO.output(channel_2_dir, GPIO.LOW)
-		GPIO.output(channel_3_dir, GPIO.LOW)
-		GPIO.output(channel_4_dir, GPIO.HIGH)
+		GPIO.output(channel_1_dir, GPIO.LOW)
+		GPIO.output(channel_2_dir, GPIO.HIGH)
+		GPIO.output(channel_3_dir, GPIO.HIGH)
+		GPIO.output(channel_4_dir, GPIO.LOW)
 		PWM.set_duty_cycle(channel_1_pwm, duty)
 		PWM.set_duty_cycle(channel_2_pwm, duty)
 		PWM.set_duty_cycle(channel_3_pwm, duty)
