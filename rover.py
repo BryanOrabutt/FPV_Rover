@@ -24,6 +24,7 @@ def init_rover():
 	PWM.start(channel_2_pwm, 0.0)
 	PWM.start(channel_3_pwm, 0.0)
 	PWM.start(channel_4_pwm, 0.0)
+	time.sleep(0.2)
 	PWM.set_frequency(channel_1_pwm, 250)
 	PWM.set_frequency(channel_2_pwm, 250)
 	PWM.set_frequency(channel_3_pwm, 250)
