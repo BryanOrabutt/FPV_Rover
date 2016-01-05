@@ -20,7 +20,7 @@ def init_rover():
 	GPIO.output(channel_2_dir, GPIO.HIGH)
 	GPIO.output(channel_3_dir, GPIO.LOW)
 	GPIO.output(channel_4_dir, GPIO.LOW)
-	PWM.start(channel_1_pwm, 0.0))
+	PWM.start(channel_1_pwm, 0.0)
 	PWM.start(channel_2_pwm, 0.0)
 	PWM.start(channel_3_pwm, 0.0)
 	PWM.start(channel_4_pwm, 0.0)
